@@ -1,6 +1,6 @@
 # CFOP
 
-http://cfop.bener.cc
+https://cfop.bener.cc
 
 > CFOP(Cross F2L OLL PLL) is a widely used speedcubing method.
 
