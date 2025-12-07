@@ -9,7 +9,9 @@
         <div class="cube" v-for="(item, i) in cubeJSON.f2l as F2L[]" :key="i" :style="getF2LStyle(item)">
           <div class="cube-idx">{{ i + 1 }}</div>
           <cube-f2l class="cube-svg"></cube-f2l>
-          <div class="cube-formula">{{ item.f }}</div>
+          <div class="cube-formula">
+            <div v-for="line in handleFormula(item.f)" :key="line">{{ line }}</div>
+          </div>
         </div>
       </div>
     </section>
@@ -23,7 +25,9 @@
         <div class="cube" v-for="(item, i) in cubeJSON.oll as OLL[]" :key="i" :style="getOLLStyle(item)">
           <div class="cube-idx">{{ i + 1 }}</div>
           <cube-oll class="cube-svg"></cube-oll>
-          <div class="cube-formula">{{ item.f }}</div>
+          <div class="cube-formula">
+            <div v-for="line in handleFormula(item.f)" :key="line">{{ line }}</div>
+          </div>
         </div>
       </div>
     </section>
@@ -59,6 +63,10 @@ function getOLLStyle(item: OLL) {
     return res
   }, {})
 }
+
+function handleFormula(formula: string) {
+  return formula.split('\n')
+}
 </script>
 
 <style scoped>
@@ -86,7 +94,7 @@ h1 {
 h1 p {
   margin: 0;
   font-size: 0.7em;
-  opacity: 0.4;
+  color: #696969;
 }
 
 .container {
