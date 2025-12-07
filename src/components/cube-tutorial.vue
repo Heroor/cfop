@@ -1,7 +1,7 @@
 <template>
   <div ref="containerRef" class="absolute left-0 right-0 overflow-hidden">
     <div class="cube-tutorial relative pt-60px mx-auto" :class="{ expanded: store.showTutorial }">
-      <div class="cube-container">
+      <div class="cube-container select-none">
         <div class="cube" v-for="(item, i) in cubeJSON.tutorial" :key="i" :style="getTutorialStyle(item)"
           @mouseenter="currentF = item.d" @mouseleave="currentF = defaultDescription">
           <div class="cube-formula">{{ item.f }}</div>
