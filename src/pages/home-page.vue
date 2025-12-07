@@ -1,5 +1,5 @@
 <template>
-  <main :class="store.cubeSize">
+  <main :class="store.cubeSize" class="p-30px">
     <head-bar></head-bar>
     <section>
       <h1>
@@ -78,7 +78,6 @@ function handleFormula(formula: string) {
 
 <style scoped>
 main {
-  padding: 30px;
   --cube-gray: #292929;
   --cube-white: white;
   --cube-blue: #2F88FF;
@@ -165,6 +164,10 @@ main.small .cube-idx {
 main.small .cube.oll .cube-idx {
   top: -8px;
   left: -12px;
+}
+
+main.small .cube-formula {
+  margin-top: 0;
 }
 
 main.small .cube-svg {

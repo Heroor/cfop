@@ -3,7 +3,7 @@
     <a href="https://cfop.bener.cc" class="text-lg" target="_blank" rel="noopener noreferrer">
       <i-cfop-logo />
     </a>
-    <n-tabs type="segment" animated class="w-150px" v-model:value="store.cubeSize">
+    <n-tabs type="segment" animated class="w-120px" v-model:value="store.cubeSize">
       <n-tab :name="Size.small" tab="Small"></n-tab>
       <n-tab :name="Size.large" tab="Large"></n-tab>
     </n-tabs>
