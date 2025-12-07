@@ -1,3 +1,4 @@
+import { ref, watch } from 'vue'
 import { defineStore } from 'pinia'
 
 const cubeSizeKey = 'cube_size'
