@@ -1,9 +1,4 @@
 @font-face {
-  font-family: 'AtkinsonHyperlegibleNext';
-  src: url('@/assets/fonts/AtkinsonHyperlegibleNext.woff') format('woff');
-}
-
-@font-face {
   font-family: 'bi';
   src: url('@/assets/fonts/bi.woff') format('woff');
 }
@@ -18,7 +13,7 @@ body {
   color: white;
   background-color: #050505;
   font-family:
-    'AtkinsonHyperlegibleNext',
+    DINAlternate,
     -apple-system,
     BlinkMacSystemFont,
     'Segoe UI',
@@ -29,4 +24,8 @@ body {
     'Open Sans',
     'Helvetica Neue',
     sans-serif;
+}
+
+.n-tabs .n-tabs-rail {
+  padding: 4px;
 }
