@@ -11,8 +11,8 @@ import Home from './pages/home-page.vue'
 const themeOverrides: GlobalThemeOverrides = {
   Tabs: {
     tabBorderRadius: '50px',
-    tabPaddingMediumSegment: '4px 0',
-    tabFontSizeMedium: '12px',
+    tabPaddingMediumSegment: '5px 0',
+    tabFontSizeMedium: '13px',
   }
 }
 </script>

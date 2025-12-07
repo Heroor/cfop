@@ -1,4 +1,114 @@
 {
+  "tutorial": [
+    {
+      "f": "R",
+      "d": "Turn the right face clockwise.",
+      "c": ["369", "369", "123456789"],
+      "a": ["2963"]
+    },
+    {
+      "f": "L",
+      "d": "Turn the left face clockwise.",
+      "c": ["147", "147"],
+      "a": ["2147"]
+    },
+    {
+      "f": "U",
+      "d": "Turn the upper face clockwise.",
+      "c": ["123456789", "123", "123"],
+      "a": ["2321"]
+    },
+    {
+      "f": "D",
+      "d": "Turn the down face clockwise.",
+      "c": ["", "789", "789"],
+      "a": ["2789"]
+    },
+    {
+      "f": "F",
+      "d": "Turn the front face clockwise.",
+      "c": ["789", "123456789", "147"],
+      "a": ["3147"]
+    },
+    {
+      "f": "B",
+      "d": "Turn the back face clockwise.",
+      "c": ["123", "", "369"],
+      "a": ["3963"]
+    },
+    {
+      "f": "r",
+      "d": "Turn the right two layers clockwise.",
+      "c": ["235689", "235689", "123456789"],
+      "a": ["2852", "2963"]
+    },
+    {
+      "f": "l",
+      "d": "Turn the left two layers clockwise.",
+      "c": ["124578", "124578"],
+      "a": ["2147", "2258"]
+    },
+    {
+      "f": "u",
+      "d": "Turn the upper two layers clockwise.",
+      "c": ["123456789", "123456", "123456"],
+      "a": ["2321", "2654"]
+    },
+    {
+      "f": "d",
+      "d": "Turn the down two layers clockwise.",
+      "c": ["", "456789", "456789"],
+      "a": ["2456", "2789"]
+    },
+    {
+      "f": "f",
+      "d": "Turn the front two layers clockwise.",
+      "c": ["456789", "123456789", "124578"],
+      "a": ["3147", "3258"]
+    },
+    {
+      "f": "b",
+      "d": "Turn the back two layers clockwise.",
+      "c": ["123456", "", "235689"],
+      "a": ["3852", "3963"]
+    },
+    {
+      "f": "M",
+      "d": "Turn the middle layer (between L and R) upwards.",
+      "c": ["258", "258"],
+      "a": ["2258"]
+    },
+    {
+      "f": "E",
+      "d": "Turn the equatorial layer (between U and D) clockwise.",
+      "c": ["", "456", "456"],
+      "a": ["2456"]
+    },
+    {
+      "f": "S",
+      "d": "Turn the standing layer (between F and B) clockwise.",
+      "c": ["456", "", "258"],
+      "a": ["3258"]
+    },
+    {
+      "f": "X",
+      "d": "Rotate the entire cube as X (R direction).",
+      "c": ["123456789", "123456789", "123456789"],
+      "a": ["2741", "2852", "2963"]
+    },
+    {
+      "f": "Y",
+      "d": "Rotate the entire cube as Y (U direction).",
+      "c": ["123456789", "123456789", "123456789"],
+      "a": ["2321", "2654", "2987"]
+    },
+    {
+      "f": "Z",
+      "d": "Rotate the entire cube as Z (F direction).",
+      "c": ["123456789", "123456789", "123456789"],
+      "a": ["3147", "3258", "3369"]
+    }
+  ],
   "f2l": [
     {
       "c": ["242", "252", "263", "272", "282", "292", "342", "353", "363", "373", "383", "393"],

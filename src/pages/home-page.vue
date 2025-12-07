@@ -1,7 +1,9 @@
 <template>
-  <main :class="store.cubeSize" class="p-30px">
+  <main :class="store.cubeSize" class="p-40px">
     <head-bar></head-bar>
-    <section>
+    <cube-tutorial></cube-tutorial>
+    <section class="transition-margin transition-duration-300"
+      :style="{ marginTop: store.showTutorial ? `${store.tutorialHeight}px` : '0' }">
       <h1>
         F2L
         <p>(First 2 Layers)</p>
@@ -9,7 +11,7 @@
       <div class="cube-container">
         <div class="cube" v-for="(item, i) in cubeJSON.f2l" :key="i" :style="getF2LStyle(item)">
           <div class="cube-idx">{{ formatIndex(i) }}</div>
-          <cube-f2l class="cube-svg"></cube-f2l>
+          <cube-f2l-svg class="cube-svg"></cube-f2l-svg>
           <div class="cube-formula">
             <div v-for="line in handleFormula(item.f)" :key="line">{{ line }}</div>
           </div>
@@ -25,7 +27,7 @@
       <div class="cube-container">
         <div class="cube oll" v-for="(item, i) in cubeJSON.oll" :key="i" :style="getOLLStyle(item)">
           <div class="cube-idx">{{ formatIndex(i) }}</div>
-          <cube-oll class="cube-svg"></cube-oll>
+          <cube-oll-svg class="cube-svg"></cube-oll-svg>
           <div class="cube-formula">
             <div v-for="line in handleFormula(item.f)" :key="line">{{ line }}</div>
           </div>
@@ -38,8 +40,8 @@
 <script setup lang="ts">
 import { useStore } from '@/stores/global'
 import cubeJSON from '@/data/cube.json'
-import cubeF2l from '@/assets/images/cube-f2l.svg'
-import cubeOll from '@/assets/images/cube-oll.svg'
+import cubeF2lSvg from '@/assets/images/cube-f2l.svg'
+import cubeOllSvg from '@/assets/images/cube-oll.svg'
 
 const store = useStore()
 const F2L_COLORS: Record<string, string> = {
@@ -86,7 +88,7 @@ main {
 }
 
 section:not(:first-child) {
-  margin-top: 80px;
+  padding-top: 80px;
 }
 
 h1 {
@@ -94,17 +96,19 @@ h1 {
   font-family: bi;
   text-align: center;
   margin-bottom: 40px;
+  line-height: 1.4;
 }
 
 h1 p {
   margin: 0;
-  font-size: 0.7em;
+  font-size: 0.6em;
+  line-height: 1;
   color: #696969;
 }
 
 .cube-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 255px);
+  grid-template-columns: repeat(auto-fill, 220px);
   justify-content: center;
   gap: 20px
 }
@@ -114,8 +118,7 @@ h1 p {
   position: relative;
   flex-direction: column;
   align-items: center;
-  padding: 36px 20px 20px;
-  border-radius: 20px;
+  padding: 36px 0 20px;
 }
 
 .cube-idx {
@@ -168,6 +171,7 @@ main.small .cube.oll .cube-idx {
 
 main.small .cube-formula {
   margin-top: 0;
+  font-size: 19px;
 }
 
 main.small .cube-svg {

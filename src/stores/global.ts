@@ -8,16 +8,22 @@ export enum Size {
 }
 
 export const useStore = defineStore('global', () => {
+  // Cube Size
   const cubeSize = ref(localStorage.getItem(cubeSizeKey) || Size.large)
-
   watch(cubeSize, value => {
     localStorage.setItem(cubeSizeKey, value)
   })
-
   function toggleCubeSize() {
     cubeSize.value = cubeSize.value === 'small' ? 'large' : 'small'
     localStorage.setItem(cubeSizeKey, cubeSize.value)
   }
 
-  return { cubeSize, toggleCubeSize }
+  // Tutorial
+  const showTutorial = ref(false)
+  const tutorialHeight = ref(0)
+  function toggleTutorial() {
+    showTutorial.value = !showTutorial.value
+  }
+
+  return { cubeSize, toggleCubeSize, showTutorial, toggleTutorial, tutorialHeight }
 })
