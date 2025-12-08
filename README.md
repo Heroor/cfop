@@ -8,9 +8,9 @@ A open-source website for learning CFOP Rubik’s Cube algorithms.
 
 ## Screenshot
 
-![](./docs//screenshot1.png)
+![](./docs/screenshot1.png)
 
-![](./docs//screenshot2.png)
+![](./docs/screenshot2.png)
 
 ## Attribution
 

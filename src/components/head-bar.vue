@@ -1,7 +1,7 @@
 <template>
   <header class="flex justify-between items-center gap-10px max-w-1000px mx-auto z-10">
     <div class="flex-1 flex items-center gap-10px">
-      <a href="https://cfop.bener.cc" target="_blank" rel="noopener noreferrer"
+      <a href="https://cfop.bener.cc" rel="noopener noreferrer"
         class="flex items-center gap-8px text-lg hover:op-90 active:op-80">
         <i-cfop-logo /> CFOP
       </a>
@@ -16,8 +16,11 @@
       <i-mingcute-question-fill @click="store.toggleTutorial()"
         class="text-gray p-3px box-content cursor-pointer hover:text-gray-300 active:text-gray-400" />
 
-      <div class="flex items-center gap-10px">
-        <a href="https://github.com/heroor/cfop" class="text-16px hover:op-90 active:op-80" target="_blank"
+      <div class="flex items-center gap-10px text-16px">
+        <a href="https://x.com/BenerHero" class="hover:op-90 active:op-80" target="_blank" rel="noopener noreferrer">
+          <i-mingcute-twitter-line />
+        </a>
+        <a href="https://github.com/heroor/cfop" class="hover:op-90 active:op-80" target="_blank"
           rel="noopener noreferrer">
           <i-mingcute-github-line />
         </a>
