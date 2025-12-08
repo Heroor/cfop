@@ -1,9 +1,11 @@
 <template>
   <header class="flex justify-between items-center gap-10px max-w-1000px mx-auto z-10">
-    <a href="https://cfop.bener.cc" class="flex-1 flex items-center gap-8px text-lg hover:op-90 active:op-80"
-      target="_blank" rel="noopener noreferrer">
-      <i-cfop-logo /> CFOP
-    </a>
+    <div class="flex-1 flex items-center gap-10px">
+      <a href="https://cfop.bener.cc" target="_blank" rel="noopener noreferrer"
+        class="flex items-center gap-8px text-lg hover:op-90 active:op-80">
+        <i-cfop-logo /> CFOP
+      </a>
+    </div>
 
     <n-tabs type="segment" animated class="w-130px select-none" v-model:value="store.cubeSize">
       <n-tab :name="Size.small" tab="Small"></n-tab>
