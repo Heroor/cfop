@@ -84,7 +84,7 @@ main {
   --cube-white: white;
   --cube-blue: #2F88FF;
   --cube-red: #FF0000;
-  --cube-yellow: #d9cd3e;
+  --cube-yellow: #e9dc41;
 }
 
 section:not(:first-child) {
