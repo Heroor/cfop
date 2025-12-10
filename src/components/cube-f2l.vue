@@ -1,6 +1,5 @@
 <template>
-  <section class="transition-margin transition-duration-300"
-    :style="{ marginTop: store.showTutorial ? `${store.tutorialHeight}px` : '0' }">
+  <section>
     <h1>
       F2L
       <p>(First 2 Layers)</p>
@@ -18,11 +17,9 @@
 </template>
 
 <script setup lang="ts">
-import { useStore } from '@/stores/global'
 import cubeJSON from '@/data/cube.json'
 import cubeF2lSvg from '@/assets/images/cube-f2l.svg'
 
-const store = useStore()
 const F2L_COLORS: Record<string, string> = {
   1: '--cube-white',
   2: '--cube-blue',

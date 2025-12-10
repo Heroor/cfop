@@ -1,6 +1,8 @@
 <template>
-  <div ref="containerRef" class="absolute left-0 right-0 overflow-hidden">
-    <div class="tutorial relative pt-60px mx-auto" :class="{ expanded: store.showTutorial }">
+  <div class="overflow-hidden transition-height transition-duration-300"
+    :style="{ height: store.showTutorial ? `${store.tutorialHeight}px` : '0' }">
+    <div ref="containerRef" class="tutorial pt-60px mx-auto" :class="{ expanded: store.showTutorial }"
+      :style="{ marginTop: `-${store.tutorialHeight}px` }">
       <div class="grid justify-center grid-cols-[repeat(auto-fill,114px)] select-none">
         <div class="flex flex-col items-center pb-14px" v-for="(item, i) in cubeJSON.tutorial" :key="i"
           :style="getTutorialStyle(item)" @mouseenter="currentF = item.d" @mouseleave="currentF = defaultDescription">
@@ -55,14 +57,14 @@ function getTutorialStyle(item: Tutorial) {
 <style scoped>
 .tutorial {
   opacity: 0;
-  transform: translateY(-100%);
+  transform: translateY(0);
   transition: 0.3s ease;
   transition-property: opacity, transform;
 }
 
 .tutorial.expanded {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(100%);
 }
 
 @media screen and (min-width: 750px) {

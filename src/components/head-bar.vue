@@ -1,5 +1,5 @@
 <template>
-  <header class="flex justify-between items-center gap-10px max-w-1000px mx-auto z-10">
+  <header class="flex justify-between items-center gap-10px max-w-1000px mx-auto relative z-10">
     <div class="flex-1 flex items-center gap-10px">
       <a href="https://cfop.bener.cc" rel="noopener noreferrer"
         class="flex items-center gap-8px text-lg hover:op-90 active:op-80">
