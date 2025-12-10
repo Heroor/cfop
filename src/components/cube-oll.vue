@@ -15,7 +15,7 @@
       <div v-for="(group, idx) in ollMap" :key="idx" class="mb-80px">
         <div class="cube-container mb-20px">
           <div class="flex gap-1 ml-lg">
-            <span class="w-12px h-12px rounded-[2px] bg-[--cube-yellow]" :class="{ 'm-r-8px': i == 4 }"
+            <span class="w-12px h-12px rounded-[2px] bg-[--cube-yellow]" :class="{ 'm-r-8px': i == 5 }"
               v-for="i in (idx + 1)" :key="i"></span>
           </div>
         </div>
