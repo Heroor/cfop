@@ -1,11 +1,11 @@
 <template>
   <div ref="containerRef" class="absolute left-0 right-0 overflow-hidden">
-    <div class="cube-tutorial relative pt-60px mx-auto" :class="{ expanded: store.showTutorial }">
-      <div class="cube-container select-none">
-        <div class="cube" v-for="(item, i) in cubeJSON.tutorial" :key="i" :style="getTutorialStyle(item)"
-          @mouseenter="currentF = item.d" @mouseleave="currentF = defaultDescription">
-          <div class="cube-formula">{{ item.f }}</div>
-          <cube-tutorial-svg class="cube-svg"></cube-tutorial-svg>
+    <div class="tutorial relative pt-60px mx-auto" :class="{ expanded: store.showTutorial }">
+      <div class="grid justify-center grid-cols-[repeat(auto-fill,114px)] select-none">
+        <div class="flex flex-col items-center pb-14px" v-for="(item, i) in cubeJSON.tutorial" :key="i"
+          :style="getTutorialStyle(item)" @mouseenter="currentF = item.d" @mouseleave="currentF = defaultDescription">
+          <div class="tutorial-cube-formula">{{ item.f }}</div>
+          <cube-tutorial-svg class="max-w-80px z-1"></cube-tutorial-svg>
         </div>
       </div>
       <div class="w-full text-center text-17px mt-20px">{{ currentF }}</div>
@@ -53,49 +53,31 @@ function getTutorialStyle(item: Tutorial) {
 </script>
 
 <style scoped>
-.cube-tutorial {
+.tutorial {
   opacity: 0;
   transform: translateY(-100%);
   transition: 0.3s ease;
   transition-property: opacity, transform;
 }
 
-.cube-tutorial.expanded {
+.tutorial.expanded {
   opacity: 1;
   transform: translateY(0);
 }
 
 @media screen and (min-width: 750px) {
-  .cube-tutorial {
+  .tutorial {
     width: 700px;
   }
 }
 
 @media screen and (min-width: 1150px) {
-  .cube-tutorial {
+  .tutorial {
     width: 1050px;
   }
 }
 
-.cube-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 114px);
-  justify-content: center;
-}
-
-.cube {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 7px 0;
-}
-
-.cube-svg {
-  max-width: 80px;
-  z-index: 1;
-}
-
-.cube-formula {
+.tutorial-cube-formula {
   line-height: 1;
   margin-bottom: -6px;
   font-size: 35px;
