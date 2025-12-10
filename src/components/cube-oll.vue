@@ -70,7 +70,6 @@ onMounted(() => {
     group[newTagId] = group[newTagId] || []
     group[newTagId].push(item)
   })
-  console.log(ollMap)
 })
 
 function getOLLStyle(item: OLL) {

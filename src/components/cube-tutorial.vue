@@ -3,7 +3,8 @@
     :style="{ height: store.showTutorial ? `${store.tutorialHeight}px` : '0' }">
     <div ref="containerRef" class="tutorial pt-60px mx-auto" :class="{ expanded: store.showTutorial }"
       :style="{ marginTop: `-${store.tutorialHeight}px` }">
-      <div class="grid justify-center grid-cols-[repeat(auto-fill,114px)] select-none">
+      <div
+        class="grid justify-center sm:grid-cols-[repeat(auto-fill,114px)] grid-cols-[repeat(auto-fill,100px)] select-none">
         <div class="flex flex-col items-center pb-14px" v-for="(item, i) in cubeJSON.tutorial" :key="i"
           :style="getTutorialStyle(item)" @mouseenter="currentF = item.d" @mouseleave="currentF = defaultDescription">
           <div class="tutorial-cube-formula">{{ item.f }}</div>
