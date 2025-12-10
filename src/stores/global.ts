@@ -2,6 +2,7 @@ import { ref, watch } from 'vue'
 import { defineStore } from 'pinia'
 
 const cubeSizeKey = 'cube_size'
+const showOllGroupKey = 'show_oll_group'
 export enum Size {
   small = 'small',
   large = 'large',
@@ -25,5 +26,10 @@ export const useStore = defineStore('global', () => {
     showTutorial.value = !showTutorial.value
   }
 
-  return { cubeSize, toggleCubeSize, showTutorial, toggleTutorial, tutorialHeight }
+  // OLL Group
+  const showOllGroup = ref(localStorage.getItem(showOllGroupKey) === 'true')
+  watch(showOllGroup, value => {
+    localStorage.setItem(showOllGroupKey, value.toString())
+  })
+  return { cubeSize, toggleCubeSize, showTutorial, toggleTutorial, tutorialHeight, showOllGroup }
 })

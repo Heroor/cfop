@@ -61,18 +61,25 @@ h1 p {
 
   .cube-idx {
     position: absolute;
-    top: 0px;
-    left: 12px;
+    top: 5px;
+    left: 16px;
     line-height: 1;
     font-family: bi;
     font-weight: bold;
-    font-size: 40px;
-    color: rgba(255, 255, 255, 0.25);
+    font-size: 50px;
     user-select: none;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 50%, transparent);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .cube.oll .cube-idx {
+    top: 2px;
+    left: 8px;
   }
 
   .cube-svg {
-    max-width: 140px;
+    width: 140px;
     z-index: 1;
   }
 
@@ -87,38 +94,40 @@ h1 p {
 
 main.small {
   .cube-container {
-    grid-template-columns: repeat(auto-fill, 350px);
+    grid-template-columns: repeat(auto-fill, 320px);
 
     .cube {
       flex-direction: row;
-      padding: 20px 0 20px 24px;
+      padding: 20px 0 20px 16px;
       gap: 20px;
     }
 
     .cube-idx {
-      top: -4px;
+      top: -8px;
       left: -8px;
-      background: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 50%, transparent);
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
+      font-size: 40px;
     }
 
     .cube.oll .cube-idx {
-      top: -8px;
+      top: -12px;
       left: -12px;
+    }
+
+    .cube-svg {
+      width: 80px;
     }
 
     .cube-formula {
       margin-top: 0;
-      font-size: 19px;
-    }
-
-    .cube-svg {
-      max-width: 90px;
+      font-size: 18px;
     }
   }
 }
 
 .n-tabs .n-tabs-rail {
   padding: 5px;
+}
+
+.n-tabs .n-tabs-rail .n-tabs-capsule {
+  transition-duration: 0.15s !important;
 }
