@@ -15,7 +15,7 @@
       <div v-for="(group, idx) in ollMap" :key="idx" class="mb-80px">
         <div class="cube-container mb-20px">
           <div class="flex gap-1 ml-lg">
-            <span class="w-12px h-12px rounded-[2px] bg-[--cube-yellow]" :class="{ 'm-r-8px': i == 5 }"
+            <span class="w-12px h-12px rounded-[2px] bg-[--cube-yellow]" :class="{ 'm-r-10px': i == 5 }"
               v-for="i in (idx + 1)" :key="i"></span>
           </div>
         </div>
@@ -36,7 +36,7 @@
     <template v-else>
       <div class="cube-container">
         <div class="cube oll" v-for="(item, i) in cubeJSON.oll" :key="i" :style="getOLLStyle(item)">
-          <div class="cube-idx">{{ formatIndex(i) }}</div>
+          <div class="cube-idx">{{ formatIndex(i + 1) }}</div>
           <cube-oll-svg class="cube-svg"></cube-oll-svg>
           <div class="cube-formula">
             <div v-for="line in handleFormula(item.f)" :key="line">{{ line }}</div>
@@ -82,7 +82,7 @@ function getOLLStyle(item: OLL) {
 }
 
 function formatIndex(index: number) {
-  return (index + 1).toString().padStart(2, '0')
+  return index.toString().padStart(2, '0')
 }
 
 function handleFormula(formula: string) {
