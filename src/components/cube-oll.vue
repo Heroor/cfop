@@ -1,10 +1,11 @@
 <template>
   <section>
-    <h1>
+    <h1 class="select-none">
       OLL
       <span title="Toggle OLL Group View">
-        <i-mingcute-refresh-4-line class="text-xl inline mr--xl text-gray hover:text-gray-300 cursor-pointer"
-          @click="store.showOllGroup = !store.showOllGroup"></i-mingcute-refresh-4-line>
+        <i-iconamoon-sorting-left-bold
+          class="text-xl inline mr--xl text-gray hover:text-gray-300 active:text-gray-400 cursor-pointer"
+          @click="store.showOllGroup = !store.showOllGroup"></i-iconamoon-sorting-left-bold>
       </span>
       <p>
         (Orientation of Last Layer)
@@ -13,7 +14,7 @@
 
     <template v-if="store.showOllGroup">
       <div v-for="(group, idx) in ollMap" :key="idx" class="mb-80px">
-        <div class="cube-container mb-20px">
+        <div class="cube-container mb-30px">
           <div class="flex gap-1 ml-lg">
             <span class="w-12px h-12px rounded-[2px] bg-[--cube-yellow]" :class="{ 'm-r-10px': i == 5 }"
               v-for="i in (idx + 1)" :key="i"></span>

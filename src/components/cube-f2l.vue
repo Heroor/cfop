@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h1>
+    <h1 class="select-none">
       F2L
       <p>(First 2 Layers)</p>
     </h1>

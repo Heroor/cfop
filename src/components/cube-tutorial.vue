@@ -5,8 +5,9 @@
       :style="{ marginTop: `-${store.tutorialHeight}px` }">
       <div
         class="grid justify-center sm:grid-cols-[repeat(auto-fill,114px)] grid-cols-[repeat(auto-fill,100px)] select-none">
-        <div class="flex flex-col items-center pb-14px" v-for="(item, i) in cubeJSON.tutorial" :key="i"
-          :style="getTutorialStyle(item)" @mouseenter="currentF = item.d" @mouseleave="currentF = defaultDescription">
+        <div class="flex flex-col items-center pb-14px hover:filter-brightness-110"
+          v-for="(item, i) in cubeJSON.tutorial" :key="i" :style="getTutorialStyle(item)"
+          @mouseenter="currentF = item.d" @mouseleave="currentF = defaultDescription">
           <div class="tutorial-cube-formula">{{ item.f }}</div>
           <cube-tutorial-svg class="max-w-80px z-1"></cube-tutorial-svg>
         </div>
@@ -82,7 +83,7 @@ function getTutorialStyle(item: Tutorial) {
 
 .tutorial-cube-formula {
   line-height: 1;
-  margin-bottom: -6px;
+  margin-bottom: -4px;
   font-size: 35px;
   font-family: bi;
   background: linear-gradient(180deg, rgba(255, 255, 255, 1) 50%, transparent);
