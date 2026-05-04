@@ -3,9 +3,12 @@
     <h1 class="select-none">
       OLL
       <span title="Toggle OLL Group View">
-        <i-iconamoon-sorting-left-bold
+        <i-fa7-solid:sort-amount-desc v-if="store.showOllGroup"
           class="text-xl inline mr--xl text-gray hover:text-gray-300 active:text-gray-400 cursor-pointer"
-          @click="store.showOllGroup = !store.showOllGroup"></i-iconamoon-sorting-left-bold>
+          @click="store.showOllGroup = !store.showOllGroup"></i-fa7-solid:sort-amount-desc>
+        <i-fa7-solid:sort-numeric-asc v-else
+          class="text-xl inline mr--xl text-gray hover:text-gray-300 active:text-gray-400 cursor-pointer"
+          @click="store.showOllGroup = !store.showOllGroup"></i-fa7-solid:sort-numeric-asc>
       </span>
       <p>
         (Orientation of Last Layer)
