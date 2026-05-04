@@ -20,4 +20,4 @@ Thanks to the cubing community for sharing algorithm collections and resources.
 
 This project is licensed under the MIT License.
 
-©2025-present, [Bener](https://github.com/Heroor)
+©2026-present, [Bener](https://github.com/Heroor)
